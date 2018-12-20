@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>register</title>
+	<link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+</head>
+<body>
+	<% include page/header.ejs %>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">					
+					<form  class="was-validated needs-validation" action="register" method="POST">
+						<table class="table table-hover">
+							<tr>
+								<td><label class="font-weight-bold">Username</label></td>
+								<td>
+									<input type="text" name="username" placeholder="@" class="form-control" required>
+								</td>
+								<td><div class="valid-tooltip">OK</div></td>
+							</tr>
+							<tr>
+								<td><label class="font-weight-bold">Password</label></td>
+								<td>
+									<input type="password" name="password" class="form-control" required>
+								</td>
+							</tr>
+							<tr>
+								<td><label class="font-weight-bold">Re-Password</label></td>
+								<td>
+									<input type="password" name="password2" class="form-control" required>
+								</td>
+							</tr>
+							<tr>
+								<td colspan ="2" class="text-center">
+									<input type="submit" name=btn_login value="Register" class="btn btn-success">
+								</td>
+							</tr>
+						</table>														
+					</form>					
+				</div>
+				<div class="col-sm-4"></div>
+			</div>
+		</div>
+	<% include page/footer.ejs %>	
+</body>
+</html>

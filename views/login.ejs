@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>login</title>
+	<link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+</head>
+<body>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					
+					<div class="alert alert-danger">
+						
+					</div>
+									
+					<form action="login" method="POST" class="form-group">
+						<table class="table table-hover">
+							<tr>
+								<td><label class="font-weight-bold">Account</label></td>
+								<td>
+									<input type="text" id="username" name="username" placeholder="@" class="form-control">
+								</td>
+							</tr>
+							<tr>
+								<td><label class="font-weight-bold">Password</label></td>
+								<td>
+									<input type="password" name="password" class="form-control">
+								</td>
+							</tr>
+							<tr>
+								<td colspan ="2" class="text-center">
+									<input type="submit" id="btn-login" name=btn_login value="Login" class="btn btn-success">
+								</td>
+							</tr>
+						</table>														
+					</form>					
+				</div>
+				<div class="col-sm-4">
+					<div id="fb-root"></div>
+				<div class="fb-login-button" data-width="100px" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true">
+					
+				</div>
+	<% include page/footer.ejs %>
+				</div>
+			</div>
+		</div>
+		
+	
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1369436703158482';
+			fjs.parentNode.insertBefore(js, fjs);
+		}
+		(document, 'script', 'facebook-jssdk'));
+	</script>	
+</body>
+</html>

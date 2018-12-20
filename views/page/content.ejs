@@ -1,0 +1,64 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3">
+			<h6 class="text-center">
+				<button id="btnListUser" class="btn btn-light">
+					<label class="font-weight-bold">Online</label>
+				</button>
+			</h6>	
+			<div id="tblUserOnline">
+				<ul id="listUser" class="list-unstyled list-group-flush text-center">
+					
+				</ul>
+			</div>							
+		</div>
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-body">
+					<ul id="worldMessage" class="list-unstyled ">
+						
+					</ul>							
+				</div>
+				<div class="card-footer">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" id="textMessage" name="message">
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary" id="btn-sendMessage">Send</button>
+						</div>
+					</div>												
+				</div>
+			</div>		
+		</div>
+		<div class="col-sm-3">
+			<h6 class="text-center">
+				<button id="btnListRoom" class="btn btn-light">
+					<label class="font-weight-bold">Room</label>
+				</button>
+			</h6>
+			<ul id="roomChat" class="list-unstyled text-center">
+				<li><button id="room1" class="btn btn-link">Room 1</button></li>
+				<li><button id="room2" class="btn btn-link">Room 2</button></li>
+			</ul>	
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<div class="card-body">
+				<ul id="roomMessage" class="list-unstyled ">
+					
+				</ul>							
+			</div>
+			<div class="card-footer">
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" id="textRoomMessage" name="message">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" id="btn-sendRoomMessage">Send</button>
+					</div>
+					
+				</div>												
+			</div>
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+</div>

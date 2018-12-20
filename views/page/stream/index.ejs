@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>www</title>
+	<script src="../../../javascripts/js/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.9/peer.min.js"></script>
+	<script src="../../../javascripts/js/bootstrap.min.js"></script>
+	<script src="../../../javascripts/client.js"></script>
+</head>
+<body>
+	<div id="myId"></div>
+	<video id="idCall" width="300px" height="300px"></video>
+	<video id="idAnswer" width="300px" height="300px"></video>	
+	<script>
+			
+			function openStream() {
+			    const config = { audio: false, video: true };
+			    return navigator.mediaDevices.getUserMedia(config);
+			};
+
+			function playStream(idVideoTag, stream) {
+			    const video = document.getElementById(idVideoTag);
+			    video.srcObject = stream;
+			    video.play();
+			};
+			openStream().then(stream => playStream('idCall', stream));
+			
+	</script>
+</body>
+</html>

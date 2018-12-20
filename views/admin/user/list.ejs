@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= title %></title>
+	<link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+</head>
+<body>
+	<% include ../layout/header.ejs %>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">					
+					<div class="table-responsive">
+						<table class="table table-hover table-bordered">
+							<tr class="font-weight-bold">
+								<td>STT</td>
+								<td>Username</td>
+								<td>Level</td>
+								<td>Status</td>
+								<td>Update</td>
+								<td>Delete</td>
+							</tr>
+							<%	var i=0;
+								user.forEach(function(users){ i++;%>
+							<tr>
+								<td><%= i %></td>
+								<td><%= users.username %></td>
+								<td>										 
+									<% 
+										switch (users.level) {
+											case 1 : %>
+											        <div class="text-gray-dark">Member</div>
+											        <% break;
+											case 2 : %>
+											        <div class="text-success">Admin</div>
+											        <% break;
+											case 3 : %>
+											        <div class="text-danger">Super Admin</div>
+											        <% break;
+										} 
+									%>
+								</td>
+								<td>
+									<% 
+										switch (users.status) {
+											case 0 : %>
+											        <div class="text-muted">disable</div>
+											        <% break;
+											case 1 : %>
+											        <div class="text-warning">banner</div>
+											        <% break;
+											case 2 : %>
+											        <div class="text-success">active</div>
+											        <% break;
+										} 
+									%>
+								</td>
+								<td><a href="/admin/user/edit/<%= users.username %>" class="btn-link btn-primary">Sửa</a></td>
+								<td><a href="/admin/user/delete/<%= users.username %>" class="btn-link btn-primary">Xóa</a></td>
+							</tr>
+							<% }); %>
+						</table>
+					</div>				
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+		</div>
+	<% include ../layout/footer.ejs %>	
+</body>
+</html>

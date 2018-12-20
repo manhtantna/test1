@@ -1,0 +1,26 @@
+<table class="table table-hover">
+	<tr>
+		<td>name</td>
+		<td>description</td>
+		<td>status</td>
+	</tr>
+	<% product.forEach(function(item){ %>
+		<tr>
+			<td><%= item.name %></td>
+			<td><%= item.description %></td>
+			<td><%= item.status %></td>
+		</tr>
+	<% });%>
+	
+</table>
+<body>
+	<div class="form-group">
+		<form action="product" class="form" method="POST">
+			<input type="text" class="form-control" name="inputName" placeholeder="name">
+			<input type="text" class="form-control" name="inputDescription" placeholeder="description">
+			<input type="text" class="form-control" name="inputStatus" status>
+			<button class="btn btn-primary" id="btnAddProduct" type="submit">ADD</button>
+		</form>		
+	</div>		
+<body>
+

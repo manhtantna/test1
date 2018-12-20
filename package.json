@@ -1,0 +1,37 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "http-errors": "~1.6.2",
+    "jsonwebtoken": "^8.3.0",
+    "mongodb": "^3.1.6",
+    "mongoose": "^5.2.17",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.18.4",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google": "^0.3.0",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "peerjs": "^0.3.18",
+    "react": "^16.6.3",
+    "react-native": "^0.57.8",
+    "react-native-web": "^0.9.9",
+    "react-native-web-player": "^2.0.0-alpha.3",
+    "simple-peer": "^9.1.2",
+    "socket.io": "^2.1.1",
+    "uid": "0.0.2"
+  }
+}
