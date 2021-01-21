@@ -31,7 +31,7 @@
     "react-native-web": "^0.9.9",
     "react-native-web-player": "^2.0.0-alpha.3",
     "simple-peer": "^9.1.2",
-    "socket.io": "^2.1.1",
+    "socket.io": "^2.4.0",
     "uid": "0.0.2"
   }
 }
