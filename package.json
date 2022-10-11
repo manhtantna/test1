@@ -27,7 +27,7 @@
     "passport-local": "^1.0.0",
     "peerjs": "^0.3.18",
     "react": "^16.6.3",
-    "react-native": "^0.57.8",
+    "react-native": "^0.70.2",
     "react-native-web": "^0.9.9",
     "react-native-web-player": "^2.0.0-alpha.3",
     "simple-peer": "^9.1.2",
